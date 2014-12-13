@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 demo-base
 =========
 
@@ -34,3 +35,9 @@ git add -A
 git commit -m "committing my demo"
 git push
 ```
+=======
+demo-joc
+========
+
+JOC Demo docker state
+>>>>>>> d0454ba14a598b0bb34050e58ba0dc8198b8aa8b
