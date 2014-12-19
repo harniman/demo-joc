@@ -1,0 +1,14 @@
+Approved
+ClientMaster{fullName=masters/api-team,uid=d3b13305-5fcf-426e-8202-abcda8da54b7,state=Approved}
+Connected
+ClientMaster{fullName=masters/api-team,uid=d3b13305-5fcf-426e-8202-abcda8da54b7,state=Approved}
+Disconnected
+ClientMaster{fullName=masters/api-team,uid=d3b13305-5fcf-426e-8202-abcda8da54b7,state=Approved}
+Connected
+ClientMaster{fullName=masters/api-team,uid=d3b13305-5fcf-426e-8202-abcda8da54b7,state=Approved}
+Disconnected
+ClientMaster{fullName=masters/api-team,uid=d3b13305-5fcf-426e-8202-abcda8da54b7,state=Approved}
+Disconnected
+ClientMaster{fullName=masters/api-team,uid=d3b13305-5fcf-426e-8202-abcda8da54b7,state=Approved}
+Connected
+ClientMaster{fullName=masters/api-team,uid=d3b13305-5fcf-426e-8202-abcda8da54b7,state=Approved}

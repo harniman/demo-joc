@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<com.cloudbees.opscenter.server.model.ClientMaster plugin="operations-center-server@1.6">
+  <actions/>
+  <description></description>
+  <id>1</id>
+  <encodedName>api-team</encodedName>
+  <idName>1-api-team</idName>
+  <timeStamp>1419006869099</timeStamp>
+  <grantId>d3b13305-5fcf-426e-8202-abcda8da54b7</grantId>
+  <approved>true</approved>
+  <localEndpoint>http://proxy.demo-joc-haproxy.dev.beedemo.io/api-team/</localEndpoint>
+  <identity>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuNTIfybCkrzjuJwo9AKuSIwHWvLCjcGj
+tPAa1HBiNp4UhC1Ux/dBYT/ovDQW1UgVFkmjYQtm00Y2JvFNwDFLsa4OMDjLIsX6nCItd5K/Q26b
+/F+ttw/BZdlawfUkXAajSTzWPKzoppgOr40OJpOegTqsiQ00Q2IDa2DIx8fGULFbinxYhOrrIKk2
+4L7mgi+oXtzcahsDR88XpHpaRgWIiq2I7monfw8O8RfK1nlWiDupzAzrd1uS1JNkI/syUbJL+iPS
+hGR2U8hata84dXPMxg38VE9dhYSNW0bNf5qiYawChgMA/6zUcWNDMwVLCWR/zbDRHamZkSmturTZ
+idYidQIDAQAB</identity>
+  <properties class="com.cloudbees.opscenter.server.model.ConnectedMaster$PropertyList">
+    <com.cloudbees.opscenter.analytics.MasterReportingProperty plugin="operations-center-analytics@1.6">
+      <enabled>true</enabled>
+    </com.cloudbees.opscenter.analytics.MasterReportingProperty>
+    <com.cloudbees.opscenter.server.properties.ConnectedMasterOwnerProperty>
+      <owners>nharniman@cloudbees.com</owners>
+      <delay>5</delay>
+    </com.cloudbees.opscenter.server.properties.ConnectedMasterOwnerProperty>
+    <com.cloudbees.opscenter.server.properties.ConnectedMasterLicenseServerProperty>
+      <strategy class="com.cloudbees.opscenter.server.properties.ConnectedMasterLicenseServerProperty$NoExecutorsStrategy"/>
+    </com.cloudbees.opscenter.server.properties.ConnectedMasterLicenseServerProperty>
+  </properties>
+  <state>Approved</state>
+</com.cloudbees.opscenter.server.model.ClientMaster>

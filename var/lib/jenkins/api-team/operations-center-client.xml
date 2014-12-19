@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<com.cloudbees.opscenter.client.plugin.PluginImpl plugin="operations-center-client@1.6">
+  <context class="com.cloudbees.opscenter.context.ItemRemoteContext" serialization="custom">
+    <com.cloudbees.opscenter.context.RemoteContext>
+      <default>
+        <instanceBag class="tree-map">
+          <comparator class="com.cloudbees.opscenter.context.RemoteContext$ByClassName" plugin="operations-center-context@1.6"/>
+          <entry>
+            <java-class>com.cloudbees.opscenter.analytics.reporter.RemoteContextReportingConfiguration</java-class>
+            <com.cloudbees.opscenter.utils.SerializableWrapper serialization="custom">
+              <com.cloudbees.opscenter.utils.SerializableWrapper>
+                <default>
+                  <class>com.cloudbees.opscenter.analytics.reporter.RemoteContextReportingConfiguration</class>
+                  <xml>&lt;com.cloudbees.opscenter.analytics.reporter.RemoteContextReportingConfiguration plugin=&quot;operations-center-analytics-reporter@1.6&quot;&gt;
+  &lt;feeder&gt;http://proxy.demo-joc-haproxy.dev.beedemo.io/operations-center/feeder&lt;/feeder&gt;
+  &lt;reportingInterval&gt;10000&lt;/reportingInterval&gt;
+&lt;/com.cloudbees.opscenter.analytics.reporter.RemoteContextReportingConfiguration&gt;</xml>
+                </default>
+              </com.cloudbees.opscenter.utils.SerializableWrapper>
+            </com.cloudbees.opscenter.utils.SerializableWrapper>
+          </entry>
+          <entry>
+            <java-class>com.cloudbees.opscenter.context.ConnectionDetails</java-class>
+            <com.cloudbees.opscenter.utils.SerializableWrapper serialization="custom">
+              <com.cloudbees.opscenter.utils.SerializableWrapper>
+                <default>
+                  <class>com.cloudbees.opscenter.context.ConnectionDetails</class>
+                  <xml>&lt;com.cloudbees.opscenter.context.ConnectionDetails plugin=&quot;operations-center-context@1.6&quot;&gt;
+  &lt;url&gt;http://proxy.demo-joc-haproxy.dev.beedemo.io/operations-center/&lt;/url&gt;
+  &lt;id&gt;1-api-team&lt;/id&gt;
+  &lt;grant&gt;d3b13305-5fcf-426e-8202-abcda8da54b7&lt;/grant&gt;
+&lt;/com.cloudbees.opscenter.context.ConnectionDetails&gt;</xml>
+                </default>
+              </com.cloudbees.opscenter.utils.SerializableWrapper>
+            </com.cloudbees.opscenter.utils.SerializableWrapper>
+          </entry>
+          <entry>
+            <java-class>com.cloudbees.opscenter.context.RemoteContext$PropertyBag</java-class>
+            <com.cloudbees.opscenter.utils.SerializableWrapper serialization="custom">
+              <com.cloudbees.opscenter.utils.SerializableWrapper>
+                <default>
+                  <class>com.cloudbees.opscenter.context.RemoteContext$PropertyBag</class>
+                  <xml>&lt;com.cloudbees.opscenter.context.RemoteContext_-PropertyBag serialization=&quot;custom&quot;&gt;
+  &lt;unserializable-parents/&gt;
+  &lt;map&gt;
+    &lt;default&gt;
+      &lt;loadFactor&gt;0.75&lt;/loadFactor&gt;
+      &lt;threshold&gt;0&lt;/threshold&gt;
+    &lt;/default&gt;
+    &lt;int&gt;1&lt;/int&gt;
+    &lt;int&gt;1&lt;/int&gt;
+    &lt;string&gt;com.cloudbees.opscenter.context.remote.RemotePath.ROOT&lt;/string&gt;
+    &lt;string&gt;jenkins://d15168931a887a6f672f66507971ee1b/&lt;/string&gt;
+  &lt;/map&gt;
+&lt;/com.cloudbees.opscenter.context.RemoteContext_-PropertyBag&gt;</xml>
+                </default>
+              </com.cloudbees.opscenter.utils.SerializableWrapper>
+            </com.cloudbees.opscenter.utils.SerializableWrapper>
+          </entry>
+          <entry>
+            <java-class>jenkins.metrics.api.MetricsAccessKey$Provider</java-class>
+            <com.cloudbees.opscenter.utils.SerializableWrapper serialization="custom">
+              <com.cloudbees.opscenter.utils.SerializableWrapper>
+                <default>
+                  <class>jenkins.metrics.api.MetricsAccessKey$FixedListProviderImpl</class>
+                  <xml>&lt;jenkins.metrics.api.MetricsAccessKey_-FixedListProviderImpl plugin=&quot;metrics@3.0.9&quot;&gt;
+  &lt;accessKeys&gt;
+    &lt;jenkins.metrics.api.MetricsAccessKey&gt;
+      &lt;key&gt;j7EpBVfE5PQfe2Kw0V1d-Rxk_FQl4OfeEgvLdcduzISBEvP8MR37W9vzPFGkil0CMlGZ5hTawzQygjnSSMsHvbz0_9muW3GtBOoLLMp_dm-gGGHdTibIzAOwwwskZOvfLLH168OnwhVE6brj5kGEPl6PqZc9qjvG6is9udv5EM5RG5Pr9fJe4-dRhKtwUn-sSVP5DM9A49D5F6xISBBTV6rNJNIB1bf0k1ZPY2t3eFjhSrv5hH9zQ5PVY7PHFM6CGHcml5bGJvWn2SiX5kFOXctt3iQZoB9Bfdj8iiS3125i_Ns6TQblcTdqztsFInYCEKXeIzdw4SjxLJOLHI8s3A&lt;/key&gt;
+      &lt;canPing&gt;false&lt;/canPing&gt;
+      &lt;canThreadDump&gt;false&lt;/canThreadDump&gt;
+      &lt;canHealthCheck&gt;false&lt;/canHealthCheck&gt;
+      &lt;canMetrics&gt;true&lt;/canMetrics&gt;
+    &lt;/jenkins.metrics.api.MetricsAccessKey&gt;
+    &lt;jenkins.metrics.api.MetricsAccessKey&gt;
+      &lt;key&gt;g-aV5ufHxz1gC1_rjIxt3o4NNZhJtRXoEjIdUQQ71aDwYyhzb-w0vzS9O02oUGggXK1dhijZmUNLeiPrGPWaE_a-e2WcoAe0W5Q-54Pf6astY0WssviHO9fpfXzYr4ZhIMFAzncbStrkcEeY6cUfkywJaC6Ti0AT5fcy8ElktPSc9q0vebVIH2U1wW1bsKYhR2osLEddA5i0e7OSposMyEU4EoarBqks6F-DmmBypIJr7dbF8yp3o5S0zKfqi82Rxc5AGmai4GWUG0R-BuLm8LjHlgCMaqdd7A7XQWBd9aq1MvPchUBsYp2fWBbxMsCCxKGEgCzK4e70KVKtb6cPdg&lt;/key&gt;
+      &lt;canPing&gt;false&lt;/canPing&gt;
+      &lt;canThreadDump&gt;false&lt;/canThreadDump&gt;
+      &lt;canHealthCheck&gt;false&lt;/canHealthCheck&gt;
+      &lt;canMetrics&gt;true&lt;/canMetrics&gt;
+    &lt;/jenkins.metrics.api.MetricsAccessKey&gt;
+    &lt;jenkins.metrics.api.MetricsAccessKey&gt;
+      &lt;key&gt;els-dC7-Ic5UNdUugzMQoHv0qEomGJ5hlBYhrr-z_usSIiYZ0_kGpSEtFEuFjqE2RdZc733BB6qtLH1hqbURXxMj1vViIP1WjVy-PkJ2Nhd-TVIP1zu6MAfYGV8YfnsX_AYYBgwCvTAEuEohUMsZGjUkHBORNcNafJLD1O0Qy9XIEgjkmcAg65CZ_uFxdvJHMsqmy22DgUm_OEy1QV3X2RCbGrDW8dzJiXPCs-xXecrzh9qhrVF-uOzcPyUSJOMakZ615UJ9EppBJAuJBvNf0-uCXhbmR3waN4NLF59iUG7Por4KmrWrggi_ZJwi3LzIWkK8BT32nKoRtOusizljKw&lt;/key&gt;
+      &lt;canPing&gt;false&lt;/canPing&gt;
+      &lt;canThreadDump&gt;false&lt;/canThreadDump&gt;
+      &lt;canHealthCheck&gt;false&lt;/canHealthCheck&gt;
+      &lt;canMetrics&gt;true&lt;/canMetrics&gt;
+    &lt;/jenkins.metrics.api.MetricsAccessKey&gt;
+  &lt;/accessKeys&gt;
+&lt;/jenkins.metrics.api.MetricsAccessKey_-FixedListProviderImpl&gt;</xml>
+                </default>
+              </com.cloudbees.opscenter.utils.SerializableWrapper>
+            </com.cloudbees.opscenter.utils.SerializableWrapper>
+          </entry>
+        </instanceBag>
+      </default>
+    </com.cloudbees.opscenter.context.RemoteContext>
+    <com.cloudbees.opscenter.context.ItemRemoteContext>
+      <default>
+        <breadcrumbs class="java.util.Collections$UnmodifiableRandomAccessList" resolves-to="java.util.Collections$UnmodifiableList">
+          <c class="list">
+            <com.cloudbees.opscenter.context.BreadcrumbImpl>
+              <displayName>Jenkins</displayName>
+              <url>http://proxy.demo-joc-haproxy.dev.beedemo.io/operations-center/</url>
+              <enabled>true</enabled>
+            </com.cloudbees.opscenter.context.BreadcrumbImpl>
+            <com.cloudbees.opscenter.context.BreadcrumbImpl>
+              <displayName>masters</displayName>
+              <url>http://proxy.demo-joc-haproxy.dev.beedemo.io/operations-center/job/masters/</url>
+              <enabled>true</enabled>
+            </com.cloudbees.opscenter.context.BreadcrumbImpl>
+          </c>
+          <list reference="../c"/>
+        </breadcrumbs>
+        <displayName>api-team</displayName>
+        <objectUrl>http://proxy.demo-joc-haproxy.dev.beedemo.io/operations-center/job/masters/job/api-team/</objectUrl>
+      </default>
+    </com.cloudbees.opscenter.context.ItemRemoteContext>
+  </context>
+</com.cloudbees.opscenter.client.plugin.PluginImpl>

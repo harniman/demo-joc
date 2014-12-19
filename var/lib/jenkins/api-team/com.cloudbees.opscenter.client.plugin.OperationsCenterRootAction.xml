@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<com.cloudbees.opscenter.client.plugin.OperationsCenterRootAction_-DescriptorImpl plugin="operations-center-client@1.6">
+  <state>CONNECTABLE</state>
+  <connectionDetails>----- BEGIN CONNECTION DETAILS -----
+H4sIAAAAAAAAADXKQQ7CIBAAwL9wdqGFok1/s8DWYixLcDUa49/Fg9fJvNW5YRG1qOTC6Nzgwa9x&#xd;
+hckeCWY7WMAQE84J/RRO6qBy6ncErBmEcO9yb9dOm0hdjKmNny+daGe4cIQN//DQgejnOrPhSg0l&#xd;
+c7lBpCLUjPp8AYwfjxCKAAAA&#xd;
+----- END CONNECTION DETAILS -----
+</connectionDetails>
+  <configurable>true</configurable>
+  <registered>true</registered>
+</com.cloudbees.opscenter.client.plugin.OperationsCenterRootAction_-DescriptorImpl>
