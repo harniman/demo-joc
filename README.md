@@ -54,10 +54,12 @@ To provide a management host
 
 To allow a load balancer to run in front of these containers:
 
-    docker run -i -t --dns=172.17.42.1 -p 80:80 --name proxy lavaliere/demo-joc-haproxy  /bin/bash
+    docker run -i -t --dns=172.17.42.1 -p 80:80 --name proxy harniman/demo-joc-haproxy  /bin/bash
 
-*** Need to edit /etc/haproxy/haproxy.cfg
-*** This step needs to be automated into a new docker image
+From the shell
+
+	service rsyslog start
+	service haproxy start	
 
 Then:
 
