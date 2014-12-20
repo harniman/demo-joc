@@ -1,14 +1,30 @@
-Approved
-ClientMaster{fullName=masters/api-team,uid=d3b13305-5fcf-426e-8202-abcda8da54b7,state=Approved}
 Connected
 ClientMaster{fullName=masters/api-team,uid=d3b13305-5fcf-426e-8202-abcda8da54b7,state=Approved}
-Disconnected
+Disconnected Error
 ClientMaster{fullName=masters/api-team,uid=d3b13305-5fcf-426e-8202-abcda8da54b7,state=Approved}
+ERROR: Disconnected Error
+[8mha:AAAAWB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P08vOT+vOD8nVc8DzHWtSE4tKMnMz/PLL0ldFVf2c+b/lb5MDAwVRQxSaBqcITRIIQMEMIIUFgAAckCEiWAAAAA=[0mjava.io.IOException: Unexpected termination of the channel
+	at hudson.remoting.SynchronousCommandTransport$ReaderThread.run(SynchronousCommandTransport.java:50)
+Caused by: java.io.EOFException
+	at java.io.ObjectInputStream$PeekInputStream.readFully(ObjectInputStream.java:2325)
+	at java.io.ObjectInputStream$BlockDataInputStream.readShort(ObjectInputStream.java:2794)
+	at java.io.ObjectInputStream.readStreamHeader(ObjectInputStream.java:801)
+	at java.io.ObjectInputStream.<init>(ObjectInputStream.java:299)
+	at hudson.remoting.ObjectInputStreamEx.<init>(ObjectInputStreamEx.java:40)
+	at hudson.remoting.AbstractSynchronousByteArrayCommandTransport.read(AbstractSynchronousByteArrayCommandTransport.java:34)
+	at hudson.remoting.SynchronousCommandTransport$ReaderThread.run(SynchronousCommandTransport.java:48)
 Connected
 ClientMaster{fullName=masters/api-team,uid=d3b13305-5fcf-426e-8202-abcda8da54b7,state=Approved}
-Disconnected
+Disconnected Error
 ClientMaster{fullName=masters/api-team,uid=d3b13305-5fcf-426e-8202-abcda8da54b7,state=Approved}
-Disconnected
-ClientMaster{fullName=masters/api-team,uid=d3b13305-5fcf-426e-8202-abcda8da54b7,state=Approved}
-Connected
-ClientMaster{fullName=masters/api-team,uid=d3b13305-5fcf-426e-8202-abcda8da54b7,state=Approved}
+ERROR: Disconnected Error
+[8mha:AAAAWB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P08vOT+vOD8nVc8DzHWtSE4tKMnMz/PLL0ldFVf2c+b/lb5MDAwVRQxSaBqcITRIIQMEMIIUFgAAckCEiWAAAAA=[0mjava.io.IOException: Unexpected termination of the channel
+	at hudson.remoting.SynchronousCommandTransport$ReaderThread.run(SynchronousCommandTransport.java:50)
+Caused by: java.io.EOFException
+	at java.io.ObjectInputStream$PeekInputStream.readFully(ObjectInputStream.java:2325)
+	at java.io.ObjectInputStream$BlockDataInputStream.readShort(ObjectInputStream.java:2794)
+	at java.io.ObjectInputStream.readStreamHeader(ObjectInputStream.java:801)
+	at java.io.ObjectInputStream.<init>(ObjectInputStream.java:299)
+	at hudson.remoting.ObjectInputStreamEx.<init>(ObjectInputStreamEx.java:40)
+	at hudson.remoting.AbstractSynchronousByteArrayCommandTransport.read(AbstractSynchronousByteArrayCommandTransport.java:34)
+	at hudson.remoting.SynchronousCommandTransport$ReaderThread.run(SynchronousCommandTransport.java:48)

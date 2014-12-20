@@ -5,8 +5,8 @@
   <id>0</id>
   <encodedName>web-team</encodedName>
   <idName>0-web-team</idName>
-  <timeStamp>1419004897027</timeStamp>
-  <grantId>77eb24f1-d530-4152-be4c-f86e37b8cf29</grantId>
+  <timeStamp>1419033503000</timeStamp>
+  <grantId>3b304d32-d74c-4d4e-ade2-bec09840eeac</grantId>
   <approved>true</approved>
   <localEndpoint>http://proxy.demo-joc-haproxy.dev.beedemo.io/web-team/</localEndpoint>
   <identity>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq93AdbXMvc7QIrGtcBf26Utdw+jnVd3+
@@ -20,7 +20,7 @@ Rc+pFwIDAQAB</identity>
       <enabled>true</enabled>
     </com.cloudbees.opscenter.analytics.MasterReportingProperty>
     <com.cloudbees.opscenter.server.properties.ConnectedMasterOwnerProperty>
-      <owners>nharniman@cloudbees.com</owners>
+      <owners></owners>
       <delay>5</delay>
     </com.cloudbees.opscenter.server.properties.ConnectedMasterOwnerProperty>
     <com.cloudbees.opscenter.server.properties.ConnectedMasterLicenseServerProperty>
