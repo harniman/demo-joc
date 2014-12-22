@@ -47,9 +47,7 @@ To create shared slaves:
 
 To provide a management host 
 
-	docker run -i -t  --dns=172.17.42.1 --name mgmt --volumes-from storage  debian:jessie 
-	apt-get update
-	apt-get install install -y --no-install-recommends curl telnet tcpdump git-core
+	docker run -i -t  --dns=172.17.42.1 --name mgmt --volumes-from storage  harniman/demo-mgmt 
 	
 
 To allow a load balancer to run in front of these containers:
