@@ -47,21 +47,17 @@ To create shared slaves:
 
 To provide a management host 
 
-	docker run -i -t  --dns=172.17.42.1 --name mgmt --volumes-from storage  harniman/demo-mgmt 
+	docker run -i -t  --dns=172.17.42.1 --name mgmt --volumes-from storage  harniman/demo-mgmt
 	
 
 To allow a load balancer to run in front of these containers:
 
     docker run -i -t --dns=172.17.42.1 -p 80:80 --name proxy harniman/demo-joc-haproxy  /bin/bash
 
-From the shell
+Then from the shell
 
 	service rsyslog start
 	service haproxy start	
-
-Then:
-
-    service haproxy start
 
 To access the applications, you'll also need to edit your hosts file. On a Mac, this can be found under /private/etc/hosts. Add the following lines to this file:
 
@@ -330,3 +326,8 @@ To view the Dockerfile and repository for the Jenkins Enterprise image:
 
     https://registry.hub.docker.com/u/lavaliere/jenkins-enterprise/
 
+
+Roadbumps and ToDo
+-----------------
+
+1) haproxy resolves dns entries and caches the IP addresses on startup. There is no guarantee that when a docker container restarts it will receive the same IP address. Ideally we need to force a scheduled reoad of haproxy periodically
