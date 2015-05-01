@@ -13,10 +13,13 @@ To mount a shared $JENKINS_HOME for HA:
 
     docker run --name storage apemberton/jenkins-storage git clone https://github.com/harniman/demo-joc.git .
 
+
 This container is based on jenkins-base and has:
 - git
 - a volume called /data which is exposed
 - checks out the contents from GitHub
+
+NOTE: This needs to be changed as we are not using git to backup JENKINS_HOME as the files exceed git limits, and, checking in binary files is not a good idea. See demo-mgmt for an rsync script that will backup the home area
 
 
 To enable container discovery for the load balancer:
@@ -29,21 +32,22 @@ Once you run the SkyDock and SkyDNS containers, they will automatically start as
 
 To run JOC in an HA setup with mounted storage for its $JENKINS_HOME:
 
-    docker run -d --dns=172.17.42.1 --name joc-1 --volumes-from storage -e JENKINS_HOME=/data/var/lib/jenkins/joc lavaliere/jenkins-operations-center --prefix="/operations-center"
-    docker run -d --dns=172.17.42.1 --name joc-2 --volumes-from storage -e JENKINS_HOME=/data/var/lib/jenkins/joc lavaliere/jenkins-operations-center --prefix="/operations-center"
+    docker run -d --dns=172.17.42.1 --name joc-1 --volumes-from storage -e JENKINS_HOME=/data/var/lib/jenkins/joc harniman/jenkins-operations-center --prefix="/operations-center"
+    docker run -d --dns=172.17.42.1 --name joc-2 --volumes-from storage -e JENKINS_HOME=/data/var/lib/jenkins/joc harniman/jenkins-operations-center --prefix="/operations-center"
 
 To run JE in an HA setup with mounted storage for its $JENKINS_HOME:
 
-    docker run -d --dns=172.17.42.1 --name api-team-1 --volumes-from storage -e JENKINS_HOME=/data/var/lib/jenkins/api-team lavaliere/jenkins-enterprise --prefix="/api-team"
-    docker run -d --dns=172.17.42.1 --name api-team-2 --volumes-from storage -e JENKINS_HOME=/data/var/lib/jenkins/api-team lavaliere/jenkins-enterprise --prefix="/api-team"
+    docker run -d --dns=172.17.42.1 --name api-team-1 --volumes-from storage -e JENKINS_HOME=/data/var/lib/jenkins/api-team harniman/jenkins-enterprise --prefix="/api-team"
+    docker run -d --dns=172.17.42.1 --name api-team-2 --volumes-from storage -e JENKINS_HOME=/data/var/lib/jenkins/api-team harniman/jenkins-enterprise --prefix="/api-team"
 
-    docker run -d --dns=172.17.42.1 --name web-team-1 --volumes-from storage -e JENKINS_HOME=/data/var/lib/jenkins/web-team lavaliere/jenkins-enterprise --prefix="/web-team"
-    docker run -d --dns=172.17.42.1 --name web-team-2 --volumes-from storage -e JENKINS_HOME=/data/var/lib/jenkins/web-team lavaliere/jenkins-enterprise --prefix="/web-team"
+    docker run -d --dns=172.17.42.1 --name web-team-1 --volumes-from storage -e JENKINS_HOME=/data/var/lib/jenkins/web-team harniman/jenkins-enterprise --prefix="/web-team"
+    docker run -d --dns=172.17.42.1 --name web-team-2 --volumes-from storage -e JENKINS_HOME=/data/var/lib/jenkins/web-team harniman/jenkins-enterprise --prefix="/web-team"
 
 To create shared slaves:
 
-    docker run -d --dns=172.17.42.1 --name slave-1 apemberton/jenkins-slave
-    docker run -d --dns=172.17.42.1 --name slave-2 apemberton/jenkins-slave
+    docker run -d --dns=172.17.42.1 --name slave-1 harniman/jenkins-slave
+    docker run -d --dns=172.17.42.1 --name slave-2 harniman/jenkins-slave
+    docker run -d --dns=172.17.42.1 --name slave-3 harniman/jenkins-slave
 
 To provide a management host 
 
@@ -52,12 +56,7 @@ To provide a management host
 
 To allow a load balancer to run in front of these containers:
 
-    docker run -i -t --dns=172.17.42.1 -p 80:80 --name proxy harniman/demo-joc-haproxy  /bin/bash
-
-Then from the shell
-
-	service rsyslog start
-	service haproxy start	
+    docker run -i -t --dns=172.17.42.1 -p 80:80 -p 40012:40012 -p 40013:40013 --name proxy harniman/demo-joc-haproxy
 
 To access the applications, you'll also need to edit your hosts file. On a Mac, this can be found under /private/etc/hosts. Add the following lines to this file:
 
@@ -315,6 +314,9 @@ To mass remove all stopped Docker containers:
 
 6. To exit a running container WITHOUT killing it, use Ctrl+P followed by Ctrl+Q, rather than Ctrl+C. 
 
+7. If error messages relating to disk space in the containers start to appear, it may be necessary to increase the space available to boot2docker vm. See https://docs.docker.com/articles/b2d_volume_resize/
+
+
 Docker Hub
 ----------
 
@@ -331,3 +333,26 @@ Roadbumps and ToDo
 -----------------
 
 1) haproxy resolves dns entries and caches the IP addresses on startup. There is no guarantee that when a docker container restarts it will receive the same IP address. Ideally we need to force a scheduled reoad of haproxy periodically
+
+
+
+RBAC Configuration
+------------------
+
+The following users are set up - passwords match the userid
+
+	User - Role
+
+	addnie.admin - Overall admin - has access to everything
+	adam.api - Team leader for the API team. Can configure new jobs for API Master
+	wally.web - Team leader for the Web team. Can configure new jobs for API Master
+	dev.api - API team developer
+	dev.web - Web team developer
+	
+The API / Web users are mapped to be able to create/run jobs only on their respective masters
+
+All authenticated users can see all jobs.
+
+
+
+	
